@@ -1,0 +1,63 @@
+@media (max-width: 1600px) {
+  .lineBorder {
+    left: 39% !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .lineBorder {
+    left: 33% !important;
+  }
+  .albumslickbottomslider .slick-next {
+    left: 51% !important;
+  }
+}
+@media (max-width: 1280px) {
+  .lineBorder {
+    left: 37% !important;
+  }
+  .albumslickbottomslider .slick-next {
+    left: 52% !important;
+  }
+}
+@media (max-width: 1024px) {
+  // .searchScrollBox {
+  //     height: 60vh !important;
+
+  // }
+}
+@media (max-width: 991px) {
+  .albumslickbottomslider .slick-next {
+    left: 55% !important;
+  }
+}
+@media (max-width: 767px) {
+  .logoimageBox {
+    width: 130px !important;
+  }
+  .closeButton {
+    padding: 4px !important;
+  }
+  .slick-dots {
+    bottom: 0 !important;
+  }
+  .albumslickbottomslider .slick-track {
+    padding: 30px 0 35px !important;
+  }
+  .albumslickbottomslider .slick-next {
+    left: 57% !important;
+  }
+  .TabButtonsBox button {
+    font-size: 12px;
+    margin-right: -5px;
+    /* display: flex; */
+  }
+}
+@media (max-width: 599px) {
+  .mobile_hide {
+    display: none !important;
+  }
+  .mobile_block {
+    display: block !important;
+  }
+}
