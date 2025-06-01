@@ -116,8 +116,6 @@ export default function Certifications() {
           </div>
         ))}
       </div>
-
-      {/* Background image styled inline */}
       <img
         className="background-image-left"
         src={colorSharp}
