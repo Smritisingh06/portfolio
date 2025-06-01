@@ -107,7 +107,7 @@ const handleSubmit = async (e) => {
   setButtonText("Sending...");
 
   try {
-    const response = await fetch("http://localhost:5000/api/contact/submitContactForm", {
+    const response = await fetch("https://portfolio-smriti-theta.vercel.app/api/contact/submitContactForm", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
