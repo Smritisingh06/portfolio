@@ -1,0 +1,62 @@
+.project-card-wrapper {
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 24px rgba(74, 47, 189, 0.6);
+}
+
+.project-card-wrapper:hover {
+  /* transform: translateY(-8px); */
+  transform: scale(1.02); 
+  box-shadow: 0 12px 24px rgba(74, 47, 189, 0.6);
+}
+
+.project-card-inner {
+  border-radius: 14px;
+  background-color: #151515;
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card-inner:hover {
+  box-shadow: 0 8px 20px rgba(170, 54, 124, 0.7);
+}
+
+.project-card-image {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  transition: transform 0.3s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-card-inner:hover .project-card-image {
+  /* transform: scale(1.05); */
+}
+
+/* Button hover effect */
+.project-card-button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+  border: none;
+  cursor: pointer;
+}
+
+.project-card-button:hover {
+  /* background-color: #aa367c; */
+  /* color: white; */
+}
