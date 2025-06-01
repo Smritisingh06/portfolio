@@ -4,13 +4,8 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/smritilogo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/github.svg';
-// import navIcon3 from '../assets/img/nav-icon3.svg';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import navIcon3 from '../assets/img/github.svg'
 import navIcon4 from '../assets/img/leetcode.svg'
 import { HashLink } from 'react-router-hash-link';
-import { FaGithub } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
