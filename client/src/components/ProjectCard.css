@@ -1,19 +1,19 @@
 .project-card-wrapper {
   border-radius: 16px;
   padding: 2px;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
   /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 12px 24px rgba(74, 47, 189, 0.6);
+    /* box-shadow: 0 12px 24px rgba(74, 47, 189, 0.6); */
 }
 
 .project-card-wrapper:hover {
   /* transform: translateY(-8px); */
   transform: scale(1.02); 
-  box-shadow: 0 12px 24px rgba(74, 47, 189, 0.6);
+  box-shadow: 0 12px 24px rgba(13, 10, 25, 0.6);
 }
 
 .project-card-inner {
@@ -34,7 +34,8 @@
   transition: transform 0.3s ease;
   display: block;
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
 }
 
 .project-card-inner:hover .project-card-image {
@@ -47,7 +48,7 @@
   color: #000;
   background-color: #fff;
   padding: 14px 48px;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 25px;
   border-radius: 0;
   position: relative;

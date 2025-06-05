@@ -1,0 +1,92 @@
+{
+  "initialMessage": {
+    "text": "👋 Hi! How may I help you today?",
+    "chips": [
+      "Tell me about yourself 👩‍💻",
+      "What can you do? 🤔",
+      "Show me your work 🎨"
+    ]
+  },
+  "conversationFlow": {
+    "Tell me about yourself 👩‍💻": {
+      "response": "I'm Smriti Singh, a passionate frontend developer! Would you like to know more about my:",
+      "chips": [
+        "Skills & Expertise 💻",
+        "Work Experience 💼",
+        "Education 📚"
+      ]
+    },
+    "Skills & Expertise 💻": {
+      "response": "I specialize in:\n• React.js & JavaScript\n• UI/UX Design\n• Responsive Web Development\n\nWould you like to see some examples?",
+      "chips": [
+        "Show me projects 🚀",
+        "Technical skills 🔧",
+        "Something else 🤔"
+      ]
+    },
+    "Work Experience 💼": {
+      "response": "I'm currently working at Mobiloitte as a Frontend Developer. I've also been a Teaching Assistant at Coding Ninjas!\n\nWould you like to know more about:",
+      "chips": [
+        "Current role 💼",
+        "Past projects 📂",
+        "Skills used 🛠️"
+      ]
+    },
+    "What can you do? 🤔": {
+      "response": "I can help you learn more about Smriti! Here's what you can ask me about:",
+      "chips": [
+        "Professional work 💼",
+        "Technical skills 💻",
+        "Contact info 📬"
+      ]
+    },
+    "Show me your work 🎨": {
+      "response": "I'd love to show you my projects! Which type interests you most?",
+      "chips": [
+        "Web Applications 🌐",
+        "UI/UX Projects 🎨",
+        "Full Stack Apps 📱"
+      ]
+    },
+    "Web Applications 🌐": {
+      "response": "Here are some of my web projects:\n\n1. Nesba - Investment Platform\n2. PG Life - Property Finder\n3. Arago-Travels\n\nWhich one would you like to know more about?",
+      "chips": [
+        "Nesba details 📊",
+        "PG Life details 🏠",
+        "Arago-Travels ✈️"
+      ]
+    },
+    "Contact info 📬": {
+      "response": "You can reach me through:\n\n📧 Email: smritisingh@example.com\n🔗 LinkedIn: /smriti-singh\n💼 GitHub: /Smritisingh06\n\nWould you like to:",
+      "chips": [
+        "Connect on LinkedIn 🔗",
+        "See my GitHub 💻",
+        "Send an email 📧"
+      ]
+    },
+    "Something else 🤔": {
+      "response": "Sure! What would you like to know?",
+      "chips": [
+        "Contact info 📬",
+        "View projects 🎨",
+        "Technical skills 💻"
+      ]
+    },
+    "Technical skills 💻": {
+      "response": "Here are my key technical skills:\n\n🔹 Frontend: React.js, JavaScript, HTML5, CSS3\n🔹 UI/UX: Figma, Adobe XD\n🔹 Backend: Node.js, Express\n🔹 Database: MongoDB, MySQL\n\nWould you like to know more about:",
+      "chips": [
+        "Frontend skills 🎨",
+        "Backend skills 🔧",
+        "See projects ⚡"
+      ]
+    },
+    "Education 📚": {
+      "response": "I completed my B.Tech in Computer Science from AKTU University with a focus on web development and software engineering.\n\nWould you like to know about:",
+      "chips": [
+        "Academic projects 📝",
+        "Certifications 🏆",
+        "Technical skills 💻"
+      ]
+    }
+  }
+} 

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { FaPaperPlane } from 'react-icons/fa';
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -14,141 +14,130 @@ export const Contact = () => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('Send Message');
   const [status, setStatus] = useState({});
   const [errors, setErrors] = useState({});
 
- const validate = () => {
-  const errs = {};
+  const validate = () => {
+    const errs = {};
 
-  // Validate First Name
-  if (!formDetails.firstName.trim()) {
-    errs.firstName = "First Name is required.";
-  } else {
-    const nameRegex = /^[A-Za-z\s]+$/;  // Only letters and spaces
-    if (!nameRegex.test(formDetails.firstName)) {
-      errs.firstName = "First Name must contain only characters.";
-    } else if (formDetails.firstName.length > 50) {
-      errs.firstName = "First Name cannot exceed 50 characters.";
+    if (!formDetails.firstName.trim()) {
+      errs.firstName = "First Name is required.";
+    } else {
+      const nameRegex = /^[A-Za-z\s]+$/;
+      if (!nameRegex.test(formDetails.firstName)) {
+        errs.firstName = "First Name must contain only characters.";
+      } else if (formDetails.firstName.length > 50) {
+        errs.firstName = "First Name cannot exceed 50 characters.";
+      }
     }
-  }
 
-  // Validate Last Name
-  if (!formDetails.lastName.trim()) {
-    errs.lastName = "Last Name is required.";
-  } else {
-    const nameRegex = /^[A-Za-z\s]+$/;  // Only letters and spaces
-    if (!nameRegex.test(formDetails.lastName)) {
-      errs.lastName = "Last Name must contain only characters.";
-    } else if (formDetails.lastName.length > 50) {
-      errs.lastName = "Last Name cannot exceed 50 characters.";
+    if (!formDetails.lastName.trim()) {
+      errs.lastName = "Last Name is required.";
+    } else {
+      const nameRegex = /^[A-Za-z\s]+$/;
+      if (!nameRegex.test(formDetails.lastName)) {
+        errs.lastName = "Last Name must contain only characters.";
+      } else if (formDetails.lastName.length > 50) {
+        errs.lastName = "Last Name cannot exceed 50 characters.";
+      }
     }
-  }
 
-  // Validate Email (unchanged)
-  if (!formDetails.email.trim()) {
-    errs.email = "Email is required.";
-  } else {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formDetails.email)) {
-      errs.email = "Email is invalid.";
+    if (!formDetails.email.trim()) {
+      errs.email = "Email is required.";
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formDetails.email)) {
+        errs.email = "Email is invalid.";
+      }
     }
-  }
 
-  // Validate Phone (unchanged)
-  if (!formDetails.phone.trim()) {
-    errs.phone = "Phone number is required.";
-  } else {
-    const phoneRegex = /^\+?\d{10,15}$/;
-    if (!phoneRegex.test(formDetails.phone)) {
-      errs.phone = "Phone number is invalid.";
+    if (!formDetails.phone.trim()) {
+      errs.phone = "Phone number is required.";
+    } else {
+      const phoneRegex = /^\+?\d{10,15}$/;
+      if (!phoneRegex.test(formDetails.phone)) {
+        errs.phone = "Phone number is invalid.";
+      }
     }
-  }
 
-  // Validate Message
-  if (!formDetails.message.trim()) {
-    errs.message = "Message is required.";
-  } else {
-    // Count words in the message
-    const wordCount = formDetails.message.trim().split(/\s+/).length;
-    if (wordCount > 300) {
-      errs.message = "Message cannot exceed 300 words.";
+    if (!formDetails.message.trim()) {
+      errs.message = "Message is required.";
+    } else {
+      const wordCount = formDetails.message.trim().split(/\s+/).length;
+      if (wordCount > 300) {
+        errs.message = "Message cannot exceed 300 words.";
+      }
     }
-  }
 
-  return errs;
-};
-
+    return errs;
+  };
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
       [category]: value
     });
-    // Clear error on input change
     setErrors({
       ...errors,
       [category]: ''
     });
-    // Clear status message when editing
     setStatus({});
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const validationErrors = validate();
-  if (Object.keys(validationErrors).length > 0) {
-    setErrors(validationErrors);
-    setStatus({ success: false, message: "Please fix the errors before submitting." });
-    return;
-  }
-
-  setButtonText("Sending...");
-
-  try {
-  const response = await fetch("https://portfolio-smriti-theta.vercel.app/api/contact/submitContactForm", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-
-    const result = await response.json();
-    setButtonText("Send");
-
-    if (response.ok) { // checks if status code is 2xx
-      setStatus({ success: true, message: result.message || "Message sent successfully." });
-      setFormDetails(formInitialDetails);
-      setErrors({});
-    } else {
-      setStatus({ success: false, message: result.message || "Something went wrong, please try again later." });
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setStatus({ success: false, message: "Please fix the errors before submitting." });
+      return;
     }
-  } catch (error) {
-    setButtonText("Send");
-    setStatus({ success: false, message: "Network error. Please try again." });
-  }
-};
 
+    setButtonText("Sending...");
+
+    try {
+      const response = await fetch("https://portfolio-smriti-theta.vercel.app/api/contact/submitContactForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formDetails),
+      });
+
+      const result = await response.json();
+      setButtonText("Send Message");
+
+      if (response.ok) {
+        setStatus({ success: true, message: result.message || "Message sent successfully." });
+        setFormDetails(formInitialDetails);
+        setErrors({});
+      } else {
+        setStatus({ success: false, message: result.message || "Something went wrong, please try again later." });
+      }
+    } catch (error) {
+      setButtonText("Send Message");
+      setStatus({ success: false, message: "Network error. Please try again." });
+    }
+  };
 
   return (
-    <section className="contact" id="connect">
+    <section className="contact" id="connect" style={{ background: 'linear-gradient(90.21deg, rgb(8, 6, 7) -5.91%, rgb(16 13 29) 111.58%)' }}>
       <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6} className="d-none d-md-block">
+        <Row className="justify-content-center">
+          <Col size={12} md={8} lg={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us" />
-              }
-            </TrackVisibility>
-          </Col>
-
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>Get In Touch</h2>
+                <div>
+                  <h2 className="text-center mb-4" style={{ 
+                    fontSize: '32px', 
+                    fontWeight: '600',
+                    color: '#fff',
+                    letterSpacing: '0.5px'
+                  }}>
+                    Get In Touch
+                  </h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
@@ -157,8 +146,13 @@ const handleSubmit = async (e) => {
                           value={formDetails.firstName}
                           placeholder="First Name"
                           onChange={(e) => onFormUpdate('firstName', e.target.value)}
+                          style={{
+                            fontSize: '14px',
+                            padding: '16px 24px',
+                            borderRadius: '12px'
+                          }}
                         />
-                        {errors.firstName && <p style={{ color: 'red', fontSize: '0.85rem' }}>{errors.firstName}</p>}
+                        {errors.firstName && <p className="error-message">{errors.firstName}</p>}
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -166,8 +160,13 @@ const handleSubmit = async (e) => {
                           value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) => onFormUpdate('lastName', e.target.value)}
+                          style={{
+                            fontSize: '14px',
+                            padding: '16px 24px',
+                            borderRadius: '12px'
+                          }}
                         />
-                        {errors.lastName && <p style={{ color: 'red', fontSize: '0.85rem' }}>{errors.lastName}</p>}
+                        {errors.lastName && <p className="error-message">{errors.lastName}</p>}
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -175,8 +174,13 @@ const handleSubmit = async (e) => {
                           value={formDetails.email}
                           placeholder="Email Address"
                           onChange={(e) => onFormUpdate('email', e.target.value)}
+                          style={{
+                            fontSize: '14px',
+                            padding: '16px 24px',
+                            borderRadius: '12px'
+                          }}
                         />
-                        {errors.email && <p style={{ color: 'red', fontSize: '0.85rem' }}>{errors.email}</p>}
+                        {errors.email && <p className="error-message">{errors.email}</p>}
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -184,30 +188,57 @@ const handleSubmit = async (e) => {
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) => onFormUpdate('phone', e.target.value)}
+                          style={{
+                            fontSize: '14px',
+                            padding: '16px 24px',
+                            borderRadius: '12px'
+                          }}
                         />
-                        {errors.phone && <p style={{ color: 'red', fontSize: '0.85rem' }}>{errors.phone}</p>}
+                        {errors.phone && <p className="error-message">{errors.phone}</p>}
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea
-                          rows="6"
+                          rows="5"
                           value={formDetails.message}
                           placeholder="Message"
                           onChange={(e) => onFormUpdate('message', e.target.value)}
+                          style={{
+                            fontSize: '14px',
+                            padding: '16px 24px',
+                            borderRadius: '12px',
+                            resize: 'vertical'
+                          }}
                         ></textarea>
-                        {errors.message && <p style={{ color: 'red', fontSize: '0.85rem' }}>{errors.message}</p>}
+                        {errors.message && <p className="error-message">{errors.message}</p>}
 
-                        {/* Status message placed just above the button */}
                         {status.message && (
-                          <p style={{
-                            color: status.success ? "green" : "red",
-                            marginBottom: "10px",
-                            fontWeight: "bold"
-                          }}>
+                          <div className={`status-message ${status.success ? 'success' : 'error'}`}>
                             {status.message}
-                          </p>
+                          </div>
                         )}
 
-                        <button type="submit"><span>{buttonText}</span></button>
+                        <button 
+                          type="submit"
+                          style={{
+                            backgroundColor: '#0dcaf0',
+                            border: 'none',
+                            borderRadius: '12px',
+                            padding: '16px 32px',
+                            fontSize: '14px',
+                            fontWeight: '500',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '8px',
+                            width: '100%',
+                            marginTop: '24px',
+                            color: '#000',
+                            transition: 'all 0.3s ease'
+                          }}
+                        >
+                          <span>{buttonText}</span>
+                          <FaPaperPlane />
+                        </button>
                       </Col>
                     </Row>
                   </form>

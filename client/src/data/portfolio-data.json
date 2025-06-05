@@ -1,0 +1,192 @@
+{
+  "personalInfo": {
+    "name": "Smriti Singh",
+    "title": "Frontend Developer",
+    "email": "smritisingh@example.com",
+    "location": "India",
+    "bio": "Passionate frontend developer with expertise in creating responsive and user-friendly web applications. Experienced in modern JavaScript frameworks and UI/UX design.",
+    "socialLinks": {
+      "github": "https://github.com/Smritisingh06",
+      "linkedin": "https://linkedin.com/in/smriti-singh",
+      "twitter": "https://twitter.com/smritisingh"
+    }
+  },
+  "education": {
+    "degree": "B.Tech in Computer Science",
+    "university": "AKTU University",
+    "duration": "2019-2023",
+    "achievements": [
+      "Specialized in Web Development",
+      "Completed multiple full-stack projects",
+      "Active member of coding club"
+    ],
+    "certifications": [
+      {
+        "name": "React.js Advanced Concepts",
+        "issuer": "Udemy",
+        "year": "2023"
+      },
+      {
+        "name": "Full Stack Development",
+        "issuer": "Coding Ninjas",
+        "year": "2022"
+      }
+    ]
+  },
+  "experience": {
+    "current": {
+      "title": "Frontend Developer",
+      "company": "Mobiloitte",
+      "duration": "2023-Present",
+      "responsibilities": [
+        "Developing responsive web applications using React.js",
+        "Implementing UI/UX designs and ensuring cross-browser compatibility",
+        "Collaborating with backend team for API integration",
+        "Optimizing application performance"
+      ]
+    },
+    "previous": [
+      {
+        "title": "Teaching Assistant",
+        "company": "Coding Ninjas",
+        "duration": "2022-2023",
+        "responsibilities": [
+          "Mentored students in web development",
+          "Conducted code reviews and provided feedback",
+          "Assisted in curriculum development"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "frontend": [
+      {
+        "name": "React.js",
+        "level": "Advanced",
+        "experience": "2 years"
+      },
+      {
+        "name": "JavaScript (ES6+)",
+        "level": "Advanced",
+        "experience": "3 years"
+      },
+      {
+        "name": "HTML5 & CSS3",
+        "level": "Advanced",
+        "experience": "3 years"
+      },
+      {
+        "name": "Redux",
+        "level": "Intermediate",
+        "experience": "2 years"
+      }
+    ],
+    "backend": [
+      {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "experience": "1.5 years"
+      },
+      {
+        "name": "Express.js",
+        "level": "Intermediate",
+        "experience": "1.5 years"
+      }
+    ],
+    "database": [
+      {
+        "name": "MongoDB",
+        "level": "Intermediate",
+        "experience": "1.5 years"
+      },
+      {
+        "name": "MySQL",
+        "level": "Basic",
+        "experience": "1 year"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Git & GitHub",
+        "level": "Advanced"
+      },
+      {
+        "name": "VS Code",
+        "level": "Advanced"
+      },
+      {
+        "name": "Figma",
+        "level": "Intermediate"
+      }
+    ]
+  },
+  "projects": {
+    "featured": [
+      {
+        "name": "Nesba",
+        "type": "Investment Platform",
+        "description": "A comprehensive investment platform helping users make informed financial decisions.",
+        "technologies": ["React.js", "Node.js", "MongoDB", "Express"],
+        "features": [
+          "Real-time market data visualization",
+          "Portfolio management",
+          "Investment tracking",
+          "User authentication"
+        ],
+        "links": {
+          "live": "https://nesba-invest.com",
+          "github": "https://github.com/Smritisingh06/nesba"
+        },
+        "image": "/projects/nesba-preview.png"
+      },
+      {
+        "name": "PG Life",
+        "type": "Property Finder",
+        "description": "A platform for finding and booking PG accommodations with detailed property listings.",
+        "technologies": ["React.js", "Node.js", "MongoDB", "Express"],
+        "features": [
+          "Property search and filters",
+          "Booking management",
+          "Review system",
+          "Location-based search"
+        ],
+        "links": {
+          "live": "https://pg-life.com",
+          "github": "https://github.com/Smritisingh06/pg-life"
+        },
+        "image": "/projects/pglife-preview.png"
+      },
+      {
+        "name": "Arago-Travels",
+        "type": "Travel Platform",
+        "description": "A travel booking and itinerary management platform with personalized recommendations.",
+        "technologies": ["React.js", "Node.js", "MongoDB", "Express"],
+        "features": [
+          "Trip planning",
+          "Hotel and flight booking",
+          "Interactive maps",
+          "Travel recommendations"
+        ],
+        "links": {
+          "live": "https://arago-travels.com",
+          "github": "https://github.com/Smritisingh06/arago-travels"
+        },
+        "image": "/projects/arago-preview.png"
+      }
+    ]
+  },
+  "achievements": [
+    {
+      "title": "Best Frontend Developer",
+      "issuer": "Mobiloitte",
+      "year": "2023",
+      "description": "Recognized for exceptional frontend development skills and project contributions"
+    },
+    {
+      "title": "Hackathon Winner",
+      "issuer": "AKTU University",
+      "year": "2022",
+      "description": "Won first place in university-wide hackathon for innovative web application"
+    }
+  ]
+} 

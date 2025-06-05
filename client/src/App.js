@@ -10,6 +10,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 // import { Certifications } from "./components/Certifications";
 import Certifications from './components/Certifications';
+import ChatBot from './components/ChatBot';
 
 
 function App() {
@@ -17,10 +18,14 @@ function App() {
     <div className="App">
       <NavBar />
       <Banner />
-      <Skills />
+         <Skills />
+
+   
       <Projects />
       <Certifications/>
+      
       <Contact />
+      {/* <ChatBot/> */}
       <Footer />
     </div>
   );

@@ -46,11 +46,19 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+              {/* <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link> */}
+              {/* <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Technologies</Nav.Link> */}
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#certifications" className={activeLink === 'certifications' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('certifications')}>Certifications</Nav.Link>
+               <Nav.Link href="#connect" className={activeLink === 'connect' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Contact</Nav.Link>
+
             </Nav>
             <span className="navbar-text">
+             {/* <Nav.Link href="#connect" className={activeLink === 'connect' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Contact Me</Nav.Link> */}
+
+                {/* <HashLink to='#connect'>
+                <button className="vvd"><span>Contact Me</span></button>
+              </HashLink> */}
               <div className="social-icon">
                 <a href="https://www.linkedin.com/in/smriti-s-886916335"><img src={navIcon1} alt="" /></a>
                 <a href="https://github.com/Smritisingh06"><img src={navIcon2} alt="" /></a>
@@ -58,9 +66,7 @@ export const NavBar = () => {
                  <a href="https://leetcode.com/u/singhsmriti06/"><img src={navIcon4} alt="" /></a>
 
               </div>
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Contact Me</span></button>
-              </HashLink>
+            
             </span>
           </Navbar.Collapse>
         </Container>
