@@ -41,9 +41,9 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
-                 
+
                 >
-                  <h2 style={{marginBottom:"30px",fontSize: "32px",}}>Projects</h2>
+                  <h2 style={{ marginBottom: "30px", fontSize: "32px", }}>Projects</h2>
                   {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
@@ -77,7 +77,7 @@ export const Projects = () => {
                       <Tab.Pane eventKey="second">
                         <div
                           style={{
-                            fontSize: "clamp(1rem, 1.6vw, 1.2rem)",
+                            fontSize: "clamp(1rem, 1.6vw, 1.1rem)",
                             lineHeight: "1.7",
                             color: "#ddd",
                             fontWeight: 400,
@@ -88,30 +88,23 @@ export const Projects = () => {
                         >
                           <p
                             style={{
-                                                          fontSize: "1rem",
-
+                              fontSize: "1rem",
                               width: "100%",
-                              maxWidth: "800px", // limits the width for readability on large screens
+                              maxWidth: "800px", // limits width for readability on large screens
                               marginBottom: "1rem",
                               paddingLeft: "1%", // responsive padding instead of fixed px
-                              paddingRight: "1%", // add right padding for balance
+                              paddingRight: "1%", // balanced right padding
                               textAlign: "left",
                               boxSizing: "border-box", // ensures padding doesn't break layout
                             }}
                           >
-                            My name is Smriti Singh. I have completed my B.E in
-                            Computer Science from{" "}
-                            <strong>Chandigarh University (2020–2024)</strong>.
-                            I’m currently working as a{" "}
-                            <strong>Software Developer</strong> at Mobiloitte
-                            and have also worked as a Teaching Assistant at
-                            Coding Ninjas, where I guided over 100 students in
-                            C++ and DSA. I specialize in{" "}
-                            <strong>MERN Stack Development</strong> and have
-                            solid knowledge in Full Stack Development, C++,
-                            Java, Python, React.js, Node.js, and Data
-                            Structures.
+                            My name is Smriti Singh. I have completed my B.E. in Computer Science from{" "}
+                            <strong>Chandigarh University (2020–2024)</strong>. I’m currently working as a{" "}
+                            <strong>Software Developer</strong> at Mobiloitte Technologies and have also worked as a Teaching Assistant at{" "}
+                            <strong>Coding Ninjas</strong>, where I guided over 100 students in C++ and Data Structures & Algorithms (DSA). I specialize in{" "}
+                            <strong>MERN Stack Development</strong> and have solid knowledge of C++, Java, Python, React.js, Next.js, Node.js, Express.js, MongoDB, and Data Structures & Algorithms.
                           </p>
+
 
                           <ul
                             style={{
@@ -127,8 +120,9 @@ export const Projects = () => {
                             <li style={{ textDecoration: "underline" }}>
                               Apart from coding, I enjoy:
                             </li>
-                            <li>🏸 Playing Badminton</li>
+                            {/* <li>🏸 Playing Badminton</li> */}
                             <li>📚 Reading Books</li>
+                            <li>📸 Photography</li>
                             <li>🧘‍♀️ Practicing Yoga</li>
                             <li>🌱 Gardening</li>
                             <li>🌍 Travelling & Exploring Nature</li>
@@ -138,7 +132,9 @@ export const Projects = () => {
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="third">
-                        <p>Some of my Favorite Books 📚✨</p>
+                        <h2 style={{ marginBottom: "30px", fontSize: "16px" }}>Some of my Favorite Books 📚✨</h2>
+
+                        {/* <p>Some of my Favorite Books 📚✨</p> */}
                         <BooksCollage />
                       </Tab.Pane>
                     </Tab.Content>

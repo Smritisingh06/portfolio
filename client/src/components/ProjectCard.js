@@ -45,7 +45,8 @@ export const ProjectCard = ({ title, description, imgUrl, url }) => {
                   cursor: "pointer",
                   width: "100%",
                   transition: "all 0.3s ease",
-                  marginTop: "24px"
+                  marginTop: "24px",
+                  
                 }}
               >
                 <span>Github Link</span>

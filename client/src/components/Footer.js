@@ -11,7 +11,7 @@ export const Footer = () => {
         <Row className="align-items-center justify-content-center text-center">
           <Col xs={12}>
             <p style={{ marginBottom: "0", fontSize: "0.95rem", fontWeight: "500", color: "#ffffffcc" }}>
-              Designed and developed with ❤️ by Smriti
+              Designed and developed by Smriti
             </p>
           </Col>
           <Col xs={12}>

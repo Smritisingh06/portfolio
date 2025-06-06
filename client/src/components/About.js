@@ -21,13 +21,13 @@ const About = () => {
 
 <Col md={6} className="px-md-4">
             <p style={{ fontSize: "1rem", lineHeight: "1.5", color: "#ccc" }}>
-I am a Software Developer at Mobiloitte with a B.E in Computer Science from Chandigarh University (2020–2024). I have also worked as a Teaching Assistant at Coding Ninjas, where I guided over 100+ students in C++ and DSA. I specialize in MERN Stack Development and have strong knowledge in Full Stack Development, C++, Java, Python, React.js, Node.js, and Data Structures.    </p>
+I am a Software Developer at Mobiloitte Technologies with a B.E in Computer Science from Chandigarh University (2020–2024). I have also worked as a Teaching Assistant at Coding Ninjas, where I guided over 100+ students in C++ and DSA. I specialize in MERN Stack Development and have strong knowledge in Full Stack Development, C++, Java, Python, React.js, Next.js, Node.js, Express.js and Data Structures.    </p>
             <p style={{ fontSize: "1.rem", lineHeight: "1.5", color: "#ccc" }}>
-              Apart from coding, I enjoy:
+              In my free time, I enjoy:
             </p>
             <ul style={{ color: "#bbb", paddingLeft: "1rem", listStyle: "none" }}>
-              <li>🏸 Playing Badminton</li>
               <li>📚 Reading Books</li>
+              <li>📸 Photography</li>
               <li>🧘‍♀️ Practicing Yoga</li>
               <li>🌱 Gardening</li>
               <li>🌍 Travelling & Exploring Nature</li>
