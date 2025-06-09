@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
-import desk_img from "../assets/img/desk.gif"; // Adjust the path as necessary
+// import desk_img from "../assets/img/desk.gif"; // Adjust the path as necessary
+
 
 const About = () => {
   return (
@@ -12,11 +13,11 @@ const About = () => {
   About Me
 </h2>
 <Col md={6} className="mb-4 mb-md-0 px-md-4">
-            <img
+            {/* <img
               src={desk_img}
               alt="Coding Desk"
               style={{ width: "100%",height:"350px", borderRadius: "12px",  }}
-            />
+            /> */}
           </Col>
 
 <Col md={6} className="px-md-4">
