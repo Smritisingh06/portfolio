@@ -35,7 +35,7 @@ export const ProjectCard = ({ title, description, imgUrl, url }) => {
                 className="project-card-button"
                 onClick={() => window.open(url, "_blank")}
                 style={{
-                  backgroundColor: "rgb(0 213 255)",
+                  backgroundColor: "RGB(94, 219, 226)",
                   borderRadius: "12px",
                   padding: "14px 48px",
                   fontSize: "14px",

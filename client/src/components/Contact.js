@@ -113,6 +113,8 @@ export const Contact = () => {
         setStatus({ success: true, message: result.message || "Message sent successfully." });
         setFormDetails(formInitialDetails);
         setErrors({});
+            setTimeout(() => setStatus({}), 6000); // Clear status after 10 seconds
+
       } else {
         setStatus({ success: false, message: result.message || "Something went wrong, please try again later." });
       }
@@ -220,7 +222,7 @@ export const Contact = () => {
                         <button 
                           type="submit"
                           style={{
-                            backgroundColor: '#0dcaf0',
+                            backgroundColor: 'RGB(94, 219, 226)',
                             border: 'none',
                             borderRadius: '12px',
                             padding: '16px 32px',
